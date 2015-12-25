@@ -1,0 +1,15 @@
+wget --no-check-certificate https://raw.github.com/cnstudio/lowendscript/master/setup-debian.sh 
+chmod +x setup-debian.sh
+./setup-debian.sh dotdeb # not required if using Ubuntu
+./setup-debian.sh system
+./setup-debian.sh dropbear [port]
+./setup-debian.sh iptables [port]
+./setup-debian.sh mysql
+./setup-debian.sh nginx
+./setup-debian.sh php
+./setup-debian.sh exim4
+./setup-debian.sh site [domain.tld]
+./setup-debian.sh mysqluser [domain.tld]
+./setup-debian.sh wordpress [domain.tld]
+./setup-debian.sh 3proxy 3128
+./setup-debian.sh 3proxyauth username password
