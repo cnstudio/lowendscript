@@ -252,7 +252,9 @@ character-set-server = utf8
 collation-server = utf8_unicode_ci 
 skip-character-set-client-handshake
 
-default_tmp_storage_engine = MyISAM  #  -----  added for newer versions of mysql
+log-err=/var/log/mysql.err
+
+# default_tmp_storage_engine = MyISAM  #  -----  added for newer versions of mysql   5.6  mysql 5.5 error
 default_storage_engine = MyISAM
 skip-innodb
 
@@ -543,7 +545,7 @@ function install_wordpress {
 
 	# Downloading the WordPress' latest and greatest distribution.
     mkdir /tmp/wordpress.$$
-    wget -O - http://wordpress.org/latest.tar.gz | \
+    wget -O - https://cn.wordpress.org/wordpress-4.4-zh_CN.tar.gz | \
         tar zxf - -C /tmp/wordpress.$$
     cp -a /tmp/wordpress.$$/wordpress/. "/var/www/$1/public"
     rm -rf /tmp/wordpress.$$
