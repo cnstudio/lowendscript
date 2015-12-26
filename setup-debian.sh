@@ -479,14 +479,15 @@ Hello World
 END
 
 	# Setup test phpinfo.php file
-	echo "<?php phpinfo(); ?>" > /var/www/$1/public/phpinfo.php
-	chown www-data:www-data "/var/www/$1/public/phpinfo.php"
+	# echo "<?php phpinfo(); ?>" > /var/www/$1/public/phpinfo.php
+	# chown www-data:www-data "/var/www/$1/public/phpinfo.php"
 
 	# Setting up Nginx mapping
 	cat > "/etc/nginx/sites-available/$1.conf" <<END
 server {
 	listen 80;
-	server_name www.$1 $1;
+	# www.$1
+	server_name  $1;
 	root /var/www/$1/public;
 	index index.html index.htm index.php;
 	client_max_body_size 32m;
