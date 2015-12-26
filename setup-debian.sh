@@ -530,7 +530,7 @@ END
 	invoke-rc.d nginx restart
 
 	print_warn "New site successfully installed."
-	print_warn "You may can test PHP functionality by accessing $1/phpinfo.php"
+	#print_warn "You may can test PHP functionality by accessing $1/phpinfo.php"
 }
 
 function install_wordpress {
@@ -546,7 +546,8 @@ function install_wordpress {
 
 	# Downloading the WordPress' latest and greatest distribution.
     mkdir /tmp/wordpress.$$
-    wget -O - https://cn.wordpress.org/wordpress-4.4-zh_CN.tar.gz | \
+    #wget -O - https://cn.wordpress.org/wordpress-4.4-zh_CN.tar.gz | \
+    wget -O - https://wordpress.org/latest.tar.gz | \
         tar zxf - -C /tmp/wordpress.$$
     cp -a /tmp/wordpress.$$/wordpress/. "/var/www/$1/public"
     rm -rf /tmp/wordpress.$$
