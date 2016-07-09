@@ -546,7 +546,7 @@ function install_wordpress {
 
 	# Downloading the WordPress' latest and greatest distribution.
     mkdir /tmp/wordpress.$$
-    wget -O - https://cn.wordpress.org/wordpress-4.5.3-zh_CN.zip | \
+    wget -O - https://cn.wordpress.org/wordpress-4.5.3-zh_CN.tar.gz | \
     #wget -O - https://wordpress.org/latest.tar.gz | \
         tar zxf - -C /tmp/wordpress.$$
     cp -a /tmp/wordpress.$$/wordpress/. "/var/www/$1/public"
