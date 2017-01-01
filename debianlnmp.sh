@@ -545,8 +545,10 @@ function install_wordpress {
 	mkdir /var/www/$1/public
 
 	# Downloading the WordPress' latest and greatest distribution.
+	#https://cn.wordpress.org/wordpress-4.5.3-zh_CN.tar.gz
+	#https://cn.wordpress.org/wordpress-4.7-zh_CN.tar.gz
     mkdir /tmp/wordpress.$$
-    wget -O - https://cn.wordpress.org/wordpress-4.4-zh_CN.tar.gz | \
+    wget -O - https://cn.wordpress.org/wordpress-4.7-zh_CN.tar.gz | \
     #wget -O - https://wordpress.org/latest.tar.gz | \
         tar zxf - -C /tmp/wordpress.$$
     cp -a /tmp/wordpress.$$/wordpress/. "/var/www/$1/public"
@@ -1322,4 +1324,3 @@ system)
 	echo '  '
 	;;
 esac
-
