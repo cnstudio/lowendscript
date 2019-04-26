@@ -548,7 +548,9 @@ function install_wordpress {
 	#https://cn.wordpress.org/wordpress-4.5.3-zh_CN.tar.gz
 	#https://cn.wordpress.org/wordpress-4.7-zh_CN.tar.gz
     mkdir /tmp/wordpress.$$
-    wget -O - https://cn.wordpress.org/wordpress-4.7-zh_CN.tar.gz | \
+    #wget -O - https://cn.wordpress.org/wordpress-4.7.3-zh_CN.tar.gz | \
+    # laseset wordpress cn
+    wget -O - https://cn.wordpress.org/latest-zh_CN.tar.gz | \
     #wget -O - https://wordpress.org/latest.tar.gz | \
         tar zxf - -C /tmp/wordpress.$$
     cp -a /tmp/wordpress.$$/wordpress/. "/var/www/$1/public"
